@@ -1,0 +1,19 @@
+.deleteicon {
+  cursor: pointer;
+}
+
+.deleteicon:hover {
+  color: red;
+}
+
+.editicon {
+  cursor: pointer;
+}
+
+.editicon:hover {
+  color: blue;
+}
+
+.addicon {
+  cursor: pointer;
+}
