@@ -26,9 +26,9 @@ const Login = () => {
           localStorage.setItem("Role", userRole);
           localStorage.setItem("UserID", userID);
           if (userRole === "Client") {
-            navigate("/dashboard");
+            navigate("/clientdashboard");
           } else if (userRole === "Admin") {
-            navigate("/dashboard");
+            navigate("/admindashboard");
           } else if (userRole === "Null") {
             alert("Kindly Register Your Account");
           }

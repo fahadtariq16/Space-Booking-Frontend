@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./components/pages/Dashboard";
+import AdminDashboard from "./components/pages/AdminDashboard";
+import ClientDashboard from "./components/pages/ClientDashboard";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
@@ -22,9 +23,15 @@ const App = () => {
         <div className="app">
           <Routes>
             <Route exact path="/" element={<PrivateRoute />}>
-              <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/" element={<AdminDashboard />} />
+              <Route exact path="/" element={<ClientDashboard />} />
             </Route>
-            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/admindashboard" element={<AdminDashboard />} />
+            <Route
+              exact
+              path="/clientdashboard"
+              element={<ClientDashboard />}
+            />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/location" element={<Location />} />
